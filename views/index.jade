@@ -1,0 +1,51 @@
+extends layout
+
+block content
+    h1= title
+    p Enter article params to begin
+
+    // Wrapper
+    #wrapper
+
+        // article INFO
+        #articleInfo
+            h2 Article Info
+            p
+                strong title:
+                |  <span id='articleInfoTitle'></span>
+                br
+                strong author:
+                |  <span id='articleInfoAuthor'></span>
+                br
+                strong description:
+                |  <span id='articleInfoDescription'></span>
+                br
+                strong modified:
+                |  <span id='articleInfoModified'></span>
+        // /article INFO
+
+        // article LIST
+        h2 article List
+        #articleList
+            table
+                thead
+                    th ArticleTitle
+                    th Author
+                    th Delete?
+                    th Update?
+                tbody
+        // /article LIST
+
+        // ADD article
+        h2 Add article
+        #addArticle
+            fieldset
+                input#inputArticleTitle(type='text', placeholder='Title')
+                input#inputArticleAuthor(type='text', placeholder='Author')
+                br
+                input#inputArticleDescription(type='text', placeholder='Description')
+                br
+                button#btnAddArticle Add Article
+        // /ADD article
+
+    // /WRAPPER
